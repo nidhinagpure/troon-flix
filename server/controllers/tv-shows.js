@@ -5,12 +5,12 @@ const getTvShow = async (req, res) => {
     return res.status(200).json({
         success: true,
         data: tvshows,
-        message:"Tv shows fetch successfully"
+        message: "Tv shows fetch successfully"
     });
 };
 
 const postTvShow = async (req, res) => {
-      const { title, timing, channel, thumbnail} = req.body; // read 
+    const { title, timing, channel, thumbnail } = req.body; // read 
     /*const newTvShow = { // object
         title,
         timing,
@@ -20,7 +20,7 @@ const postTvShow = async (req, res) => {
 
     TV_SHOWS.push(newTvShow);*/
 
-    const newTvShow = new TvShow ({
+    const newTvShow = new TvShow({
         title,
         timing,
         channel,
@@ -29,24 +29,58 @@ const postTvShow = async (req, res) => {
     const savedTvshow = await newTvShow.save();
 
     return res.status(200).json({
-        success:true,
-        data:savedTvshow,
-        message:"Tv show added successfully",
+        success: true,
+        data: savedTvshow,
+        message: "Tv show added successfully",
     });
 };
 
-const getTvShowbyId = (req, res) => {
+const getTvShowbyId = async (req, res) => {
     const { id } = req.params;
 
+
+    try {
+        const tvShow = await TvShow.findById(id);
+
+        if (!tvShow) {
+            return res.status(404).json({
+                success:false,
+                message: "Tv show not found",
+                data: null,
+            });
+        }
+
+        return res.status(200).json({
+            success: true,
+            data: tvShow,
+            message: "Tv show fetched successfully",
+        });
+
+    } catch (e) {
+        return res.status(400).json({
+            success: false,
+            message: e.message,
+            data: null,
+        });
+    }
+};
+
+const deleteTvShowById = async (req, res) => {
+    const { id } = req.params;
+
+    await TvShow.deleteOne({ _id: id });
+
+
+    
     return res.status(200).json({
-        success:true,
-        data:tvshows,
-        message:"Tv show fetched successfully",
+        success: true,
+        message: "Tv show delete successfully",
     });
-}; 
+};
 
 export {
-         getTvShow,
-         postTvShow,
-         getTvShowbyId,
-    }
+    getTvShow,
+    postTvShow,
+    getTvShowbyId,
+    deleteTvShowById,
+}

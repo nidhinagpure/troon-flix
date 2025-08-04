@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { getTvShow ,postTvShow, getTvShowbyId } from "./controllers/tv-shows.js";
+import { getTvShow ,postTvShow, getTvShowbyId, deleteTvShowById } from "./controllers/tv-shows.js";
 dotenv.config();
 
 const app = express();
@@ -23,6 +23,11 @@ app.get("/health", ( req, res ) => {
 app.get("/tv_shows", getTvShow );
 app.post("/tv_shows", postTvShow );
 app.get("/tv_show/:id", getTvShowbyId);
+app.delete("/tv_show/:id", deleteTvShowById)
+
+
+
+
 const PORT = process.env.PORT || 5002; 
 
 app.listen(PORT, () => {
