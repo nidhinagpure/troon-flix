@@ -15,10 +15,6 @@ const connectDB = async () => {
     };
 }
 
-
-
-
-
 const TV_SHOWS = [];
 
 app.get("/health", ( req, res ) => {
