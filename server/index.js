@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import { getTvShow ,postTvShow, getTvShowbyId } from "./controllers/tv-shows.js";
 dotenv.config();
-import TvShow from "./models/TvShows.js";
 
 const app = express();
 app.use(express.json()); // middleware
@@ -20,45 +20,9 @@ app.get("/health", ( req, res ) => {
     res.status(200).json({message:"Server is running"});
 }); // check there server is running or not 
 
-app.get("/tv_shows", async (req, res) => {
-
-    const tvshows = await TvShow.find(); // read from database
-
-    return res.status(200).json({
-        success: true,
-        data: tvshows,
-        message:"Tv shows fetch successfully"
-    });
-});
-
-app.post("/tv_shows", async (req, res) => {
-
-    const { title, timing, channel, thumbnail} = req.body; // read 
-
-    /*const newTvShow = { // object
-        title,
-        timing,
-        channel,
-        thumbnail
-    };
-
-    TV_SHOWS.push(newTvShow);*/
-
-     const newTvShow = new TvShow ({
-        title,
-        timing,
-        channel,
-        thumbnail,
-     });
-     const savedTvshow = await newTvShow.save();
-
-    return res.status(200).json({
-        success:true,
-        data:savedTvshow,
-        message:"Tv show added successfully",
-    });
-});
-
+app.get("/tv_shows", getTvShow );
+app.post("/tv_shows", postTvShow );
+app.get("/tv_show/:id", getTvShowbyId);
 const PORT = process.env.PORT || 5002; 
 
 app.listen(PORT, () => {
