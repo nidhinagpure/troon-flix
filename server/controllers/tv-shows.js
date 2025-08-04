@@ -17,7 +17,6 @@ const postTvShow = async (req, res) => {
         channel,
         thumbnail
     };
-
     TV_SHOWS.push(newTvShow);*/
 
     const newTvShow = new TvShow({
