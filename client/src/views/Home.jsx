@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <div>
-        <h1 className="text-3xl font-bold underline">Troon Flix</h1>
+        <h1 className="text-4xl text-center pt-6 font-bold">Laugh Out Loud on TroonFlix😍</h1>
         {tvShows.map((serialObj) => {
             const { _id, title, timing, channel, thumbnail } = serialObj;
             return (
