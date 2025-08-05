@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from "axios"
 import TvShowCard from '../components/TvShowCard';
 
@@ -27,7 +27,7 @@ function Home() {
                timing={timing}
                channel={channel}
                thumbnail={thumbnail} 
-            />
+       />
           );
         })}
 
