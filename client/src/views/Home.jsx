@@ -12,7 +12,7 @@ function Home() {
 
    useEffect(() => {
     loadTvshows();
-   }, []);
+   }, []); // Api call 
 
   return (
     <div>
