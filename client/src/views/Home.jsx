@@ -16,7 +16,8 @@ function Home() {
 
   return (
     <div>
-        <h1 className="text-4xl text-center pt-6 font-bold">Laugh Out Loud on TroonFlix😍</h1>
+        <h1 className="text-4xl text-center pt-6 font-bold">Laugh Out Loud on TroonFlix -😍</h1>
+        <div className='flex flex-wrap justify-center pt-6'>
         {tvShows.map((serialObj) => {
             const { _id, title, timing, channel, thumbnail } = serialObj;
             return (
@@ -30,6 +31,7 @@ function Home() {
        />
           );
         })}
+        </div>
 
     </div>
   );
