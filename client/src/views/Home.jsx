@@ -1,5 +1,5 @@
 import axios from "axios"
-import TvShowCard from "../components/TvShowCard";
+import TvShowCard from "./../components/TvShowCard";
 
 import React, { useEffect, useState } from 'react'
 
