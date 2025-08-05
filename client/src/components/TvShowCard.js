@@ -1,11 +1,11 @@
-import React from 'react'
 
-const TvShowCard = () => {
+function TvShowCard({_id, title, timing, channel, thumbnail}) {
   return (
     <div>
-      
+      <img src={thumbnail}/>
+       <h2>{title}</h2>
     </div>
   )
 }
 
-export default TvShowCard
+export default TvShowCard;
