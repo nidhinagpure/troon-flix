@@ -28,7 +28,7 @@ function Home() {
                channel={channel}
                thumbnail={thumbnail} 
             />
-            );
+          );
         })}
 
     </div>
