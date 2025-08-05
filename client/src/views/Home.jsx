@@ -6,7 +6,7 @@ function Home() {
    const [ tvShows, setTvShows] = useState ([]);
 
    const loadTvshows = async () => {
-    const response = await axios.get(`${import.meta.env.VITE_API_URL}/tvshows`);
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/tv_shows`);
     setTvShows(response.data.data);
    };
 
