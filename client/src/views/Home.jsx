@@ -6,12 +6,11 @@ import React, { useEffect, useState } from 'react'
 function Home() {
    const [ tvshows, setTvShows ] = useState([]);
 
-   const loadTvShows = () => {
-    const response = axios.get(`${import.meta.env.VITE_API_URL}/tv_show`
-        
+   const loadTvShows = async () => {
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/tv_show`
     );
-    setTvShows(response.data.data);
 
+    setTvShows(response.data.data);
    };
 
    useEffect(() => {
@@ -34,10 +33,10 @@ function Home() {
         />
       )
     })}
-      </div>
+    </div>
     )
   }
 
   
 
-export default Home;
+export default Home
