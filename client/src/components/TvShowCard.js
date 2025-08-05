@@ -1,3 +1,5 @@
+import React from "react";
+import axios from "axios";
 
 function TvShowCard({_id, title, timing, channel, thumbnail}) {
   return (

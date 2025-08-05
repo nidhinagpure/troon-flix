@@ -20,23 +20,24 @@ function Home() {
 
     return (
       <div>
-        {tvshows.map((serialobj) => {
-          const { _id, title, timing, channel, thumbnail } = serialobj;
+        {tvshows.map((serialObj) => {
+          const { _id, title, timing, channel, thumbnail } = serialObj;
 
-          return <TvShowCard
+      return (
+         <TvShowCard
           key={_id}
           _id={_id}
           title={title}
           timing={timing}
           channel={channel}
-          thumbnail={thumbnail}>
-        </TvShowCard>
-          
-        })}
+          thumbnail={thumbnail}
+        />
+      )
+    })}
       </div>
     )
   }
 
   
 
-export default Home
+export default Home;
