@@ -53,6 +53,7 @@ function Home() {
       >
         <div className='w-[400px]'>
           <h1 className='font-bold text-4xl mb-6 text-center'>Add New Show</h1>
+          
           <Input
             type="text"
             placeholder="Show Name"
