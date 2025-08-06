@@ -21,7 +21,7 @@ function Input({placeholder, onChange, type, value,size="md", lable=""}) {
         onChange(e.target.value);
         size={size}
       }}
-      className={`text-md border-2 border-gray-300 w-full cursor-pointer ${SIZE_CLASSES[size]}`}
+      className={`text-md border-2 border-gray-300 w-full${SIZE_CLASSES[size]}`}
 
     
     />

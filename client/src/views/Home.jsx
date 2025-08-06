@@ -28,7 +28,7 @@ function Home() {
 
   return (
     <div>
-      <h1 className='bottom-12 right-10 fixed bg-gray-300 rounded-full p-2' onClick={() => { setModelOpen(true) }}><CirclePlusIcon className='h-14 w-14' /></h1>
+      <h1 className='bottom-12 right-10 fixed bg-gray-300 rounded-full p-2' onClick={() => { setModelOpen(true) }}><CirclePlusIcon className='h-14 w-14 cursor-pointer' /></h1>
       <h1 className="text-4xl text-center pt-1 font-bold">Laugh Out Loud on TroonFlix -😍</h1>
       <div className='flex flex-wrap justify-center pt-6'>
         {tvShows.map((serialObj) => {
