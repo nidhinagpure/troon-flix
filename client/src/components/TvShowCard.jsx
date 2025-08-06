@@ -1,8 +1,8 @@
 import React from 'react'
 import { AlarmClock as ClockIcon,
          MonitorPlay as MonitorPlayIcon
-
-} from "lucide-react"
+    } from "lucide-react"
+import Button from './Button'    
 
 function TvShowCard({_id, title, timing, channel, thumbnail}) {
   return (
@@ -11,7 +11,11 @@ function TvShowCard({_id, title, timing, channel, thumbnail}) {
       <h1 className='text-2xl my-2 font-bold'>{title}</h1> 
       <p><ClockIcon className='inline mr-2 h-5 mb-1'/>{timing}</p>
       <p className='text-xl'><MonitorPlayIcon className='inline mr-2 h-5 mb-1'/>{channel}</p>
+      <Button
+      
 
+      
+      />
     </div>
   )
 }
