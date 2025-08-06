@@ -15,7 +15,7 @@ function Home() {
   const [tvShows, setTvShows] = useState([]);
   const fixTvShow = [
     {
-      title: "Shaka Boom Boom",
+      title: "Shaka laka Boom Boom",
       timing: "5:00pm - 6:00pm",
       channel: "star utsav",
       thumbnail: "https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-49091268/49091268.jpg",
@@ -31,7 +31,7 @@ function Home() {
       timing: "7:00pm - 8:00pm",
       channel: "star utsav",
       thumbnail: "https://m.media-amazon.com/images/M/MV5BYWU1YTUxYzItOTY5ZS00ZTQ3LTk1MmMtYjQ5ZTQ0NGEwMDVjXkEyXkFqcGc@._V1_.jpg",
-    },    
+    },
   ]
   const [isModelOpen, setModelOpen] = useState(false);
 
@@ -81,7 +81,9 @@ function Home() {
 
   return (
     <div>
-      <h1 className='h-15 w-15 cursor-pointer fixed bottom-5 right-5 bg-blue-500 text-white  shadow-lg hover:bg-blue-600 transition duration-300 flex items-center justify-center rounded-full z-50'
+      <h1 className='h-15 w-15 cursor-pointer fixed bottom-5 right-5 bg-blue-500 
+      text-white  shadow-lg hover:bg-blue-600 transition duration-300 
+      flex items-center justify-center rounded-full z-50'
         onClick={() => {
           setModelOpen(true);
         }}>
@@ -89,9 +91,9 @@ function Home() {
         /> </h1>
       <h1 className="text-4xl text-center pt-8 font-bold">Laugh Out Loud on TroonFlix -😍</h1>
       <div className='flex flex-wrap justify-center pt-6'>
-      {fixTvShow.map((fixObj) => {
-          const {title, timing, channel, thumbnail } = fixObj;
-          return(
+        {fixTvShow.map((fixObj) => {
+          const { title, timing, channel, thumbnail } = fixObj;
+          return (
             <TvShowCard
               title={title}
               timing={timing}
@@ -99,7 +101,7 @@ function Home() {
               thumbnail={thumbnail}
             />
           );
-      })}
+        })}
       </div>
 
       <div className='flex flex-wrap justify-center pt-6'>
@@ -123,7 +125,7 @@ function Home() {
           setModelOpen(false);
         }}
       >
-        <div className='w-[400px]'>
+        <div className="w-full max-w-[400px] mx-auto px-4">
           <h1 className='font-bold text-4xl mb-6 text-center'>Add New Show</h1>
 
           <Input
