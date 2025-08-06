@@ -28,8 +28,8 @@ app.get("/health", ( req, res ) => {
 
 app.get("/tv_shows", getTvShow );
 app.post("/tv_shows", postTvShow );
-app.get("/tv_show/:id", getTvShowbyId);
-app.delete("/tv_show/:id", deleteTvShowById)
+app.get("/tv_shows/:id", getTvShowbyId);
+app.delete("/tv_shows/:id", deleteTvShowById)
 
 const PORT = process.env.PORT || 5002; 
 

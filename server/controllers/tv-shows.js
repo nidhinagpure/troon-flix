@@ -96,8 +96,6 @@ const deleteTvShowById = async (req, res) => {
     const { id } = req.params;
 
     await TvShow.deleteOne({ _id: id });
-
-
     
     return res.status(200).json({
         success: true,

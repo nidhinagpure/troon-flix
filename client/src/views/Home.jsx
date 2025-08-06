@@ -46,7 +46,6 @@ function Home() {
     }
   };
 
-
   const loadTvshows = async () => {
     const response = await axios.get(
       `${import.meta.env.VITE_API_URL}/tv_shows`
@@ -60,8 +59,9 @@ function Home() {
 
   return (
     <div>
-      <h1 className='bottom-12 right-10 fixed bg-gray-300 rounded-full p-2'
-        onClick={() => { setModelOpen(true) }}>
+      <h1 className='h-15 w-15 cursor-pointer fixed bottom-5 right-5 bg-blue-500 text-white  shadow-lg hover:bg-blue-600 transition duration-300 flex items-center justify-center rounded-full z-50'
+        onClick={() => { setModelOpen(true);
+         }}>
         <CirclePlusIcon className='h-14 w-14 cursor-pointer'
         /> </h1>
       <h1 className="text-4xl text-center pt-8 font-bold">Laugh Out Loud on TroonFlix -😍</h1>

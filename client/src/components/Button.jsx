@@ -7,7 +7,7 @@ function Button({
     size = "md",
     icon,
     iconPosition,
-    className = ""
+    className= ""
 }) {
 
     const VARIANT_CLASSES = {
