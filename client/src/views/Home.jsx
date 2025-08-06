@@ -8,20 +8,17 @@ import toast, { Toaster } from "react-hot-toast";
 import Button from "../components/Button"
 import { SquarePlus as SquarePlusIcon } from "lucide-react";
 
-
-
-
 function Home() {
   const [tvShows, setTvShows] = useState([]);
   const fixTvShow = [
     {
-      title: "Shaka laka Boom Boom",
+      title: "Shaka laka boom boom",
       timing: "5:00pm - 6:00pm",
       channel: "star utsav",
       thumbnail: "https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-49091268/49091268.jpg",
     },
     {
-      title: "shaktimaan",
+      title: "Shaktimaan",
       timing: "4:00pm - 5:00pm",
       channel: "star utsav",
       thumbnail: "https://i.ytimg.com/vi/Ux70bUb4tyo/maxresdefault.jpg",
@@ -30,7 +27,7 @@ function Home() {
       title: "Ring wrong ring",
       timing: "7:00pm - 8:00pm",
       channel: "star utsav",
-      thumbnail: "https://m.media-amazon.com/images/M/MV5BYWU1YTUxYzItOTY5ZS00ZTQ3LTk1MmMtYjQ5ZTQ0NGEwMDVjXkEyXkFqcGc@._V1_.jpg",
+      thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIwgmATDnMudfbLNw1tulq6dKnE_IG2oWvXA&s",
     },
   ]
   const [isModelOpen, setModelOpen] = useState(false);
@@ -82,7 +79,7 @@ function Home() {
   return (
     <div>
       <h1 className='h-15 w-15 cursor-pointer fixed bottom-5 right-5 bg-blue-500 
-      text-white  shadow-lg hover:bg-blue-600 transition duration-300 
+      text-white  shadow-lg hover:bg-blue-800 transition duration-300 
       flex items-center justify-center rounded-full z-50'
         onClick={() => {
           setModelOpen(true);
